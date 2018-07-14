@@ -1,13 +1,7 @@
 
 ## 项目概述
 
-* 产品名称：LaraBBS
-* 项目代号：larabbs
-* 官方地址：https://laravel-china.org/topics/6592
-
-LaraBBS 是一个简洁的论坛应用，使用 Laravel5.5 编写而成。一步步开发此项目的教程请见 [《Web 开发实战进阶  - 从零开始构建论坛系统》](https://laravel-china.org/topics/6592)。
-
-![](https://dn-phphub.qbox.me/uploads/images/201711/01/1/xcr6ijTArV.png)
+LaraBBS 是一个简洁的论坛应用，使用 Laravel5.5 编写而成。
 
 ## 功能如下
 
@@ -37,9 +31,7 @@ LaraBBS 是一个简洁的论坛应用，使用 Laravel5.5 编写而成。一步
 
 ## 开发环境部署/安装
 
-本项目代码使用 PHP 框架 [Laravel 5.5](https://d.laravel-china.org/docs/5.5/) 开发，本地开发环境使用 [Laravel Homestead](https://d.laravel-china.org/docs/5.5/homestead)。
-
-下文将在假定读者已经安装好了 Homestead 的情况下进行说明。如果您还未安装 Homestead，可以参照 [Homestead 安装与设置](https://laravel-china.org/docs/5.5/homestead#installation-and-setup) 进行安装配置。
+本项目代码使用 PHP 框架 Laravel 5.5开发
 
 ### 基础安装
 
@@ -49,38 +41,10 @@ LaraBBS 是一个简洁的论坛应用，使用 Laravel5.5 编写而成。一步
 
     > git clone git@github.com:summerblue/larabbs.git
 
-#### 2. 配置本地的 Homestead 环境
+#### 2. 配置文件夹权限
 
-1). 运行以下命令编辑 Homestead.yaml 文件：
+/storage/ 和 /bootstrap/cache/ 设为777
 
-```shell
-homestead edit
-```
-
-2). 加入对应修改，如下所示：
-
-```
-folders:
-    - map: ~/my-path/larabbs/ # 你本地的项目目录地址
-      to: /home/vagrant/larabbs
-
-sites:
-    - map: larabbs.test
-      to: /home/vagrant/larabbs/public
-
-databases:
-    - larabbs
-```
-
-3). 应用修改
-
-修改完成后保存，然后执行以下命令应用配置信息修改：
-
-```shell
-homestead provision
-```
-
-随后请运行 `homestead reload` 进行重启。
 
 #### 3. 安装扩展包依赖
 
@@ -103,8 +67,6 @@ php artisan key:generate
 
 #### 6. 生成数据表及生成测试数据
 
-在 Homestead 的网站根目录下运行以下命令
-
 ```shell
 $ php artisan migrate --seed
 ```
@@ -112,9 +74,6 @@ $ php artisan migrate --seed
 初始的用户角色权限已使用数据迁移生成。
 
 
-#### 7. 配置 hosts 文件
-
-    echo "192.168.10.10   phphub.app" | sudo tee -a /etc/hosts
 
 ### 前端框架安装
 
@@ -129,7 +88,7 @@ $ php artisan migrate --seed
 3). 安装 Laravel Mix
 
 ```shell
-yarn install
+npm install
 ```
 
 4). 编译前端内容
@@ -153,8 +112,8 @@ npm run watch-poll
 
 ### 链接入口
 
-* 首页地址：http://larabbs.test/
-* 管理后台：http://larabbs.test/admin
+* 首页地址：https://www.z5w.net/
+* 管理后台：https://www.z5w.net/admin
 
 管理员账号密码如下:
 
@@ -164,6 +123,12 @@ password: password
 ```
 
 至此, 安装完成 ^_^。
+
+相关问题：
+[laravel出现No hint path defined for [sudosu]的解决方法](https://www.cnblogs.com/ytkah/p/9308673.html)
+[laravel项目出现Non-static method Redis::hGet() cannot be called statically的解决方法](https://www.cnblogs.com/ytkah/p/9308829.html)
+
+
 
 ## 扩展包使用情况
 
