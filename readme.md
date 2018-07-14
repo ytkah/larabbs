@@ -43,7 +43,7 @@ LaraBBS 是一个简洁的论坛应用，使用 Laravel5.5 编写而成。
 
 #### 2. 配置文件夹权限
 
-/storage/ 和 /bootstrap/cache/ 设为777
+/storage/ 和 /bootstrap/cache/ 设为777，设置网站运行目录为/public/
 
 
 #### 3. 安装扩展包依赖
@@ -125,7 +125,9 @@ password: password
 至此, 安装完成 ^_^。
 
 相关问题：
+
 [laravel出现No hint path defined for [sudosu]的解决方法](https://www.cnblogs.com/ytkah/p/9308673.html)
+
 [laravel项目出现Non-static method Redis::hGet() cannot be called statically的解决方法](https://www.cnblogs.com/ytkah/p/9308829.html)
 
 
